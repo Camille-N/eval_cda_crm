@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    <div class="span8">
+        {% for person in sales_persons %}
+        <article>
+            <div class="row">
+                <div class="span8">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ person.firstName }} {{ person.lastName }} 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+</div>
+{% endblock %}
